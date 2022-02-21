@@ -3,6 +3,11 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
 
+// Loading
+const textureLoader = new THREE.TextureLoader()
+
+// const normalTexture = textureLoader.load('/textures/NormalMap.png')
+
 // Debug
 const gui = new dat.GUI()
 
@@ -19,6 +24,7 @@ const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
 
 const material = new THREE.MeshBasicMaterial()
 material.color = new THREE.Color(0xff0000)
+// material.normalMap = normalTexture;
 
 // Mesh
 const sphere = new THREE.Mesh(geometry,material)
@@ -31,6 +37,11 @@ pointLight.position.x = 2
 pointLight.position.y = 3
 pointLight.position.z = 4
 scene.add(pointLight)
+
+// const pointLight2 = new THREE.PointLight(0xffffff, 2)
+// pointLight2.position.set(1,1,1)
+// pointLight2.intensity = 1
+// scene.add(pointLight)
 
 /**
  * Sizes
