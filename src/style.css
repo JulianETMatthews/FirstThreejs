@@ -9,6 +9,7 @@ body
 {
     height: 100vh;
     font-family: 'Poppins';
+    background: #141c2b;
 }
 
 .webgl
@@ -17,4 +18,15 @@ body
     top: 0;
     left: 0;
     outline: none;
+}
+
+.testing-text
+{
+    color: white;
+    font-family: "Georgia";
+    font-size: 50px;
+    text-align: center;
+    padding: 400px 0;
+    display: grid;
+    text-transform: uppercase;
 }
